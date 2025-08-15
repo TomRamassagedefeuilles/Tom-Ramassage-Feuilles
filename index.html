@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tom ramassage de feuilles – Pincourt</title>
+  <meta name="description" content="Service local de ramassage de feuilles à Pincourt : ramassage, mise en sacs et transport à l’écocentre. Abonnements hebdo / aux deux semaines.">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="#">
+      <img src="assets/logo.svg" alt="" width="28" height="28" aria-hidden="true">
+      <span class="brand-title" data-i18n="brandName">Tom ramassage de feuilles</span>
+    </a>
+    <nav class="menu">
+      <a href="#services" data-i18n="navServices">Services</a>
+      <a href="#pricing" data-i18n="navPricing">Tarifs</a>
+      <a href="#contact" class="cta" data-i18n="navContact">Contact</a>
+      <button id="langToggle" aria-label="Switch language">EN</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        <h1 data-i18n="heroTitle">Des feuilles en moins, du temps en plus.</h1>
+        <p class="lead" data-i18n="heroLead">Service rapide et soigné à Pincourt. Ramassage, mise en sacs, transport à l’écocentre. Abonnements hebdo / aux deux semaines.</p>
+        <div class="hero-ctas">
+          <a class="btn primary" href="tel:+15147967075" data-i18n="ctaCall">Appeler Tom</a>
+          <a class="btn outline" href="#contact" data-i18n="ctaQuote">Obtenir un devis</a>
+        </div>
+        <ul class="ticks">
+          <li data-i18n="point1">Local et fiable</li>
+          <li data-i18n="point2">Tarifs clairs</li>
+          <li data-i18n="point3">Réponse sous 24 h</li>
+        </ul>
+      </div>
+      <div class="hero-art">
+        <div class="card glass">
+          <div class="badge" data-i18n="badgeAutumn">Automne 2025</div>
+          <p data-i18n="cardPitch">Cour propre, planning flexible et service sans tracas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="section">
+    <div class="wrap two-col">
+      <div>
+        <h2 data-i18n="servicesTitle">Services</h2>
+        <ul class="list-check">
+          <li data-i18n="svc1"><strong>Ramassage</strong> des feuilles (avant + arrière)</li>
+          <li data-i18n="svc2"><strong>Mise en sacs</strong> (sacs bruns)</li>
+          <li data-i18n="svc3"><strong>Transport à l’écocentre</strong> (option)</li>
+          <li data-i18n="svc4"><strong>Abonnements</strong> hebdo / bi‑hebdo</li>
+        </ul>
+      </div>
+      <div class="note">
+        <h3 data-i18n="whyUsTitle">Pourquoi moi ?</h3>
+        <p data-i18n="whyUsText">Je suis local, ponctuel et transparent. Mon objectif : garder votre terrain propre tout l’automne.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="section alt">
+    <div class="wrap">
+      <h2 data-i18n="pricingTitle">Tarifs simples</h2>
+      <div class="pricing-grid">
+        <div class="price-card">
+          <h3 data-i18n="sizeSmall">Petit (≤ 250 m²)</h3>
+          <p class="price"><span>$40</span> <span class="sub" data-i18n="perVisit">/ visite</span></p>
+          <p class="muted" data-i18n="subSmall">Abonnement : $35 / visite</p>
+        </div>
+        <div class="price-card">
+          <h3 data-i18n="sizeMedium">Moyen (250–500 m²)</h3>
+          <p class="price"><span>$60</span> <span class="sub" data-i18n="perVisit">/ visite</span></p>
+          <p class="muted" data-i18n="subMed">Abonnement : $50 / visite</p>
+        </div>
+        <div class="price-card">
+          <h3 data-i18n="sizeLarge">Grand (500–1000 m²)</h3>
+          <p class="price"><span>$80</span> <span class="sub" data-i18n="perVisit">/ visite</span></p>
+          <p class="muted" data-i18n="subLarge">Abonnement : $65 / visite</p>
+        </div>
+      </div>
+      <p class="tiny" data-i18n="pricingNote">Très grands terrains : prix sur devis. Transport à l’écocentre en option (+ selon volume).</p>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact">
+    <div class="wrap">
+      <h2 data-i18n="contactTitle">Contact</h2>
+      <div class="contact-grid">
+        <!-- Formspree-ready form. If FORMSPREE_ENDPOINT is empty, a mailto fallback will be used. -->
+        <form id="contactForm" method="POST" class="card form">
+          <div class="row">
+            <label for="name" data-i18n="labelName">Nom</label>
+            <input id="name" name="name" type="text" required placeholder="Votre nom">
+          </div>
+          <div class="row">
+            <label for="email" data-i18n="labelEmail">Courriel</label>
+            <input id="email" name="_replyto" type="email" required placeholder="ex: nom@gmail.com">
+          </div>
+          <div class="row">
+            <label for="message" data-i18n="labelMsg">Message</label>
+            <textarea id="message" name="message" rows="4" required placeholder="Décrivez votre cour et vos besoins…"></textarea>
+          </div>
+          <input type="hidden" name="_subject" value="Nouvelle demande – Tom ramassage de feuilles">
+          <button class="btn primary" type="submit" data-i18n="send">Envoyer</button>
+          <p class="tiny muted" style="margin-top:6px"><span data-i18n="mailtoNote"><span data-i18n="mailtoNote">En cliquant sur “Envoyer”, votre application de courriel s’ouvrira avec un message prérempli adressé à <b>tom.ramassagedefeuilles@gmail.com</b>.</span></span></p>
+          <p class="tiny muted" id="formStatus" aria-live="polite"></p>
+        </form>
+
+        <div class="card details">
+          <div class="detail">
+            <div class="k" data-i18n="phone">Téléphone</div>
+            <div class="v"><a href="tel:+15147967075">514 796 7075</a></div>
+          </div>
+          <div class="detail">
+            <div class="k" data-i18n="email">Courriel</div>
+            <div class="v"><a href="mailto:tom.ramassagedefeuilles@gmail.com">tom.ramassagedefeuilles@gmail.com</a></div>
+          </div>
+          <div class="detail">
+            <div class="k" data-i18n="hours">Disponibilités</div>
+            <div class="v" data-i18n="hoursText">Lun–Dim, 9h–18h</div>
+          </div>
+          <div class="detail">
+            <div class="k">Zone</div>
+            <div class="v">Pincourt et environs</div>
+          </div>
+        </div>
+      </div>
+      <p class="center tiny" data-i18n="ctaFooter">Envoyez-moi un message pour réserver votre première visite.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="tiny">&copy; <span id="year"></span> <span data-i18n="brandName">Tom ramassage de feuilles</span> • Pincourt, QC</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
