@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="thankTitle">Merci — Tom ramassage de feuilles</title>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .thanks { min-height: 60vh; display: grid; place-items: center; }
+    .thanks .card { max-width: 720px; padding: 28px; text-align: center; }
+    .thanks h1 { font-size: clamp(28px, 3vw, 40px); margin: .2rem 0 .6rem; }
+    .thanks p { color: var(--muted); margin: 0 0 1rem; }
+    .btn-row { display: inline-flex; gap: .8rem; margin-top: .6rem; }
+    .btn { display:inline-block; padding:.8rem 1.05rem; border-radius:12px; text-decoration:none; font-weight:700; }
+    .primary { background: linear-gradient(135deg, var(--accent-2), var(--accent)); color:#00140a; }
+  </style>
+</head>
+<body>
+  <main class="thanks">
+    <div class="card">
+      <h1 data-i18n="thankTitle">Merci !</h1>
+      <p data-i18n="thankLead">Votre message a bien été préparé. Vous pouvez revenir à l’accueil pendant que votre application de courriel s’ouvre.</p>
+      <div class="btn-row">
+        <a class="btn primary" href="index.html" data-i18n="backHome">Revenir à l’accueil</a>
+      </div>
+    </div>
+  </main>
+  <script src="script.js"></script>
+  <script>
+    // Ensure the page language matches the last used language on index (if stored)
+    try {
+      const last = localStorage.getItem('lang') || 'fr';
+      if (typeof applyLang === 'function') applyLang(last);
+    } catch(e){}
+  </script>
+</body>
+</html>
